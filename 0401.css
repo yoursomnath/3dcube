@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: black;
+  /*background-color: #c4c4c4;*/
+
+}
+.container{
+  height: 300px;
+  width: 300px;
+  /*background: black;*/
+  perspective: 600px;
+  position: absolute;
+}
+.box{
+  height: 300px;
+  width: 300px;
+  /*background: rgba(30, 40, 220, 0.7);*/
+  transform-style: preserve-3d;
+  /*transition: 6s all;*/
+  animation: dj 5s linear infinite;
+} 
+@keyframes dj{
+  0%{
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  25%{
+    transform: rotateY(90deg) rotateX(90deg);
+  }
+  50%{
+    transform: rotateY(180deg) rotateX(180deg);
+  }
+  75%{
+    transform: rotateY(270deg) rotateX(270deg);
+  }
+  100%{
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+
+}
+ /*.box:hover{
+  transform: rotateY(360deg)rotateX(360deg);
+}*/
+.box div{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  opacity: 0.8;
+  background-color: red;
+  text-align: center;
+}
+.box .left{
+  transform: translateX(150px)rotateY(90deg);
+  background-color: #c4c4c4;
+
+}
+.box .right{
+  transform: translateX(-150px)rotateY(90deg);
+  background-color: blue;
+}
+.box .up{
+  transform: translateY(-150px)rotateX(90deg);
+  background-color: limegreen;
+}
+.box .down{
+  transform: translateY(150px)rotateX(90deg);
+  background-color: magenta;
+}
+.box .front{
+  transform: translateZ(150px);
+}
+.box .back{
+  transform: translateZ(-150px);
+}
+span{
+    display: flex;
+    top: 50%; 
+    right: 50%;
+    transform: translate(25%,180%);
+    font-family: verdana;
+    font-size: 50px;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
